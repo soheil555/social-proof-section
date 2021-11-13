@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+$veryDarkMagenta: hsl(300, 43%, 22%);
+$softPink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p,
+span {
+  font-size: 1.7rem;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-color: $white;
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  color: $veryDarkMagenta;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.overview {
+  display: flex;
+  width: 80%;
+  gap: 20rem;
+  align-items: center;
+}
+
+.o1 {
+  flex: 1 1 10rem;
+  p {
+    color: $darkGrayishMagenta;
+  }
+}
+
+.o2 {
+  flex: 2 1 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.star-box {
+  width: 75%;
+  padding: 2rem 4rem;
+  background-color: $lightGrayishMagenta;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+
+  img {
+    margin-right: 0.3rem;
+  }
+
+  span {
+    margin-left: 2rem;
+    color: $veryDarkMagenta;
+    font-weight: bold;
+  }
+}
+
+.s2 {
+  margin-left: 10rem;
+}
+
+.s3 {
+  margin-left: 20rem;
+}
+
+.comments-section {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+
+  img {
+    border-radius: 50%;
+    margin: 2rem;
+    margin-left: 0;
+  }
+}
+
+.comment {
+  background-color: $veryDarkMagenta;
+  padding: 3rem;
+  border-radius: 1rem;
+  width: 30%;
+
+  p {
+    color: $white;
+    padding: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+.person-image {
+  display: flex;
+  align-items: center;
+}
+
+.person-name {
+  display: flex;
+  flex-direction: column;
+
+  .name {
+    color: $white;
+    margin-bottom: 0.5rem;
+  }
+
+  .position {
+    color: $softPink;
+  }
+}
