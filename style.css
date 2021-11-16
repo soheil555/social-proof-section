@@ -12,25 +12,24 @@ html {
 
 p,
 span {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+}
+
+p {
+  line-height: 2.7rem;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #502050;
 }
 
 body {
   font-family: "Spartan", sans-serif;
   background-image: url("./images/bg-pattern-top-desktop.svg"), url("./images/bg-pattern-bottom-desktop.svg");
   background-position: left top, right bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-color: white;
-}
-
-h1 {
-  font-size: 5rem;
-  margin-bottom: 2rem;
-  color: #502050;
-}
-
-p {
-  line-height: 2rem;
+  background-repeat: no-repeat;
+  background-size: 80rem, contain;
 }
 
 .container {
@@ -54,27 +53,30 @@ p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80%;
-  gap: 20rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 80%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10rem;
 }
 
 .o1 {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 10rem;
-          flex: 1 1 10rem;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
 }
 
 .o1 p {
-  color: #937b92;
+  color: #502050;
+  margin-top: 1rem;
 }
 
 .o2 {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 10rem;
-          flex: 2 1 10rem;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 25rem;
+          flex: 3 1 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,65 +84,92 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.star-box {
-  width: 75%;
-  padding: 2rem 4rem;
-  background-color: #f7f2f7;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-}
-
-.star-box img {
-  margin-right: 0.3rem;
-}
-
-.star-box span {
-  margin-left: 2rem;
-  color: #502050;
-  font-weight: bold;
-}
-
-.s2 {
-  margin-left: 10rem;
-}
-
-.s3 {
-  margin-left: 20rem;
-}
-
-.comments-section {
-  margin-top: 7rem;
+.o2 .star-box {
+  text-align: center;
+  gap: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  padding: 2rem 4rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #f7f2f7;
+}
+
+.o2 .star-box span {
+  font-weight: bold;
+  color: #502050;
+}
+
+.o2 .star-box img {
+  margin-right: 1rem;
+}
+
+.s1 {
+  margin-right: 15rem;
+}
+
+.s2 {
+  margin-right: 7.5rem;
+}
+
+.comments-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 80%;
-}
-
-.comments-section img {
-  border-radius: 50%;
-  margin: 2rem;
-  margin-left: 0;
+  max-width: 80%;
 }
 
 .comment {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25rem;
+          flex: 1 1 25rem;
+  min-height: 30vh;
+  padding: 4rem 3rem;
   background-color: #502050;
-  padding: 3rem;
   border-radius: 1rem;
-  width: 30%;
 }
 
 .comment p {
   color: white;
-  padding: 2rem;
-  line-height: 2.5rem;
+}
+
+.comment1 {
+  margin-left: 0;
+}
+
+.comment2 {
+  margin-top: 3rem;
+}
+
+.comment3 {
+  margin-top: 6rem;
 }
 
 .person-image {
@@ -150,6 +179,13 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 3rem;
+}
+
+.person-image img {
+  border-radius: 50%;
+  margin-right: 2rem;
+  width: 15%;
 }
 
 .person-name {
@@ -164,10 +200,52 @@ p {
 
 .person-name .name {
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .person-name .position {
   color: #ee68a4;
+}
+
+@media screen and (max-width: 1446px) {
+  html {
+    font-size: 60%;
+  }
+  .o2 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container {
+    margin: 10rem 0;
+  }
+  .overview {
+    margin-bottom: 5rem;
+  }
+  .o1 {
+    text-align: center;
+  }
+  .o1 p {
+    margin: 2rem 0;
+  }
+  .comment {
+    min-height: 45vh;
+  }
+  .comment2 {
+    margin-top: 0;
+  }
+  .comment3 {
+    margin-top: 0;
+  }
+  .o2 .star-box {
+    width: 90%;
+    margin-top: 2rem;
+  }
+  .s1 {
+    margin-right: 0;
+  }
+  .s2 {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -18,7 +18,16 @@ html {
 
 p,
 span {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
+}
+
+p {
+  line-height: 2.7rem;
+}
+
+h1 {
+  font-size: 5rem;
+  color: $veryDarkMagenta;
 }
 
 body {
@@ -26,18 +35,8 @@ body {
   background-image: url("./images/bg-pattern-top-desktop.svg"),
     url("./images/bg-pattern-bottom-desktop.svg");
   background-position: left top, right bottom;
-  background-repeat: no-repeat, no-repeat;
-  background-color: $white;
-}
-
-h1 {
-  font-size: 5rem;
-  margin-bottom: 2rem;
-  color: $veryDarkMagenta;
-}
-
-p {
-  line-height: 2rem;
+  background-repeat: no-repeat;
+  background-size: 80rem, contain;
 }
 
 .container {
@@ -50,80 +49,103 @@ p {
 
 .overview {
   display: flex;
-  width: 80%;
-  gap: 20rem;
-  align-items: center;
+  flex-wrap: wrap;
+  max-width: 80%;
+  justify-content: space-between;
+  margin-bottom: 10rem;
 }
 
 .o1 {
-  flex: 1 1 10rem;
+  flex: 1 1 25rem;
+
   p {
-    color: $darkGrayishMagenta;
+    color: $veryDarkMagenta;
+    margin-top: 1rem;
   }
 }
 
 .o2 {
-  flex: 2 1 10rem;
+  flex: 3 1 25rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: flex-end;
+
+  .star-box {
+    text-align: center;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    background-color: $lightGrayishMagenta;
+
+    span {
+      font-weight: bold;
+      color: $veryDarkMagenta;
+    }
+
+    img {
+      margin-right: 1rem;
+    }
+  }
 }
 
-.star-box {
-  width: 75%;
-  padding: 2rem 4rem;
-  background-color: $lightGrayishMagenta;
-  border-radius: 1rem;
-  margin-bottom: 2rem;
-
-  img {
-    margin-right: 0.3rem;
-  }
-
-  span {
-    margin-left: 2rem;
-    color: $veryDarkMagenta;
-    font-weight: bold;
-  }
+.s1 {
+  margin-right: 15rem;
 }
 
 .s2 {
-  margin-left: 10rem;
-}
-
-.s3 {
-  margin-left: 20rem;
+  margin-right: 7.5rem;
 }
 
 .comments-section {
-  margin-top: 7rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
   justify-content: space-between;
-  width: 80%;
-
-  img {
-    border-radius: 50%;
-    margin: 2rem;
-    margin-left: 0;
-  }
+  max-width: 80%;
 }
 
 .comment {
+  flex: 1 1 25rem;
+  min-height: 30vh;
+  padding: 4rem 3rem;
   background-color: $veryDarkMagenta;
-  padding: 3rem;
   border-radius: 1rem;
-  width: 30%;
 
   p {
     color: $white;
-    padding: 2rem;
-    line-height: 2.5rem;
   }
+}
+
+.comment1 {
+  margin-left: 0;
+}
+
+.comment2 {
+  margin-top: 3rem;
+}
+
+.comment3 {
+  margin-top: 6rem;
 }
 
 .person-image {
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+
+  img {
+    border-radius: 50%;
+    margin-right: 2rem;
+    width: 15%;
+  }
 }
 
 .person-name {
@@ -132,10 +154,61 @@ p {
 
   .name {
     color: $white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .position {
     color: $softPink;
+  }
+}
+
+@media screen and (max-width: 1446px) {
+  html {
+    font-size: 60%;
+  }
+
+  .o2 {
+    align-items: center;
+  }
+
+  .container {
+    margin: 10rem 0;
+  }
+
+  .overview {
+    margin-bottom: 5rem;
+  }
+
+  .o1 {
+    text-align: center;
+
+    p {
+      margin: 2rem 0;
+    }
+  }
+
+  .comment {
+    min-height: 45vh;
+  }
+
+  .comment2 {
+    margin-top: 0;
+  }
+
+  .comment3 {
+    margin-top: 0;
+  }
+
+  .o2 .star-box {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .s1 {
+    margin-right: 0;
+  }
+
+  .s2 {
+    margin-right: 0;
   }
 }
